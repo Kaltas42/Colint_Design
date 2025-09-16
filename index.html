@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio-Inspired Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Brand.png">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1><a href="index.html" >COLIN TANG DESIGN</h1>
+    <nav>
+      <ul>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+      <div class="frontimage">
+    <img src='Brand.png' alt='front image'>
+  </div>
+    <h2>Branding, Illustration and Design</h2>
+    <p>Driven by curiosity and the simple joy of creating art.  </p>
+  </section>
+
+
+<section class="portfolio-showcase">
+  <div class="slideshow-grid">
+    <!-- Slideshow 1 -->
+    <a href="bubup.html" class="slideshow">
+      <img src="Portfolio\Bubup\Magazine cover.png" class="active" alt="Project 1">
+      <img src="Portfolio\Bubup\Mockup of bubup 1-View 1.png" alt="Project 1 alt">
+      <img src="Portfolio\Bubup\Mockup of bubup 1-View-3.png" alt="Project 1 alt">
+    </a>
+
+    <!-- Slideshow 2 -->
+    <a href="medallion.html" class="slideshow">
+      <img src="Portfolio\Medallion\MedallionFrontCover.jpg" class="active" alt="Project 2">
+      <img src="Portfolio\Medallion\Tang_102295413_3Dcoin.png" alt="Project 2 alt">
+      <img src="Portfolio\Medallion\Medallion_Backside.jpg" alt="Project 2 alt">
+    </a>
+
+    <!-- Slideshow 3 -->
+    <a href="FINAL_FINAL.html" class="slideshow">
+      <img src="Portfolio\Kickstarter project\Frontcover.png" class="active" alt="Project 3">
+      <img src="Portfolio\Kickstarter project\DPS Mockup 1.png" alt="Project 3 alt">
+      <img src="Portfolio\Kickstarter project\DPS Mockup 2.png" alt="Project 3 alt">
+    </a>
+
+    <!-- Slideshow 4 -->
+    <a href="walkprint.html" class="slideshow">
+      <img src="Portfolio\Melbourne Poster\Blue CMYK.jpg" class="active" alt="Project 4">
+      <img src="Portfolio\Melbourne Poster\Green CMYK.jpg" alt="Project 4 alt">
+      <img src="Portfolio\Melbourne Poster\Red CMYK.jpg" alt="Project 4 alt">
+    </a>
+  </div>
+</section>
+
+
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Let’s Work Together</h2>
+    <p>Interested in collaborating? Get in touch.</p>
+    <a href="mailto:youremail@example.com">Email Me</a>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Colin Tang Design. All rights reserved.</p>
+  </footer>
+  
+<script>
+  const slideshows = document.querySelectorAll('.slideshow');
+
+  slideshows.forEach((slideshow, i) => {
+    let current = 0;
+    const slides = slideshow.querySelectorAll('img');
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4000 + (i * 500)); // stagger timing a bit
+  });
+</script>
+
+</body>
+</html>
