@@ -14,7 +14,7 @@
       <ul>
         <li><a href="work.html">Work</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -25,24 +25,46 @@
     <p>Tools used: Adobe Illustrator, Indesign, Dimension.</p>
   </section>
 <section class="project-gallery one-image">
-    <img src="Portfolio\Soju\Soju.png" alt="Main project image">
+    <img src="Portfolio\Soju\Soju.png" alt="Main project image"onclick="openLightbox(this)">
 <section class="project-gallery label-image">
-  <img src="Portfolio\Soju\Bottlelabels.png" alt="Main project image">
+  <img src="Portfolio\Soju\Bottlelabels.png" alt="Main project image"onclick="openLightbox(this)">
 </section>
 </section>
   <section class="project-gallery twolabel-images">
-    <img src="Portfolio\Soju\SojuFrontLabel.png" alt="Project image 1">
-    <img src="Portfolio\Soju\SojuBackLabel.png" alt="Project image 2">
+    <img src="Portfolio\Soju\SojuFrontLabel.png" alt="Project image 1"onclick="openLightbox(this)">
+    <img src="Portfolio\Soju\SojuBackLabel.png" alt="Project image 2"onclick="openLightbox(this)">
   </section>
   <footer class="project-footer">
     <a href="work.html">← Back to Work</a>
   </footer>
- <!-- Footer -->
-  <footer>
+   <footer class="site-footer">
+  <div class="footer-content">
     <p>&copy; 2025 ColinTDesign. All rights reserved.</p>
-  </footer>
+    <nav class="footer-nav">
+      <a href="terms.html">Terms & Conditions</a> |
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</footer>
   
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <span id="close-btn">&times;</span>
+  <img id="lightbox-img" src="" alt="Expanded image">
+</div>
 
+<script>
+function openLightbox(img) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  lightbox.style.display = "flex";
+  lightboxImg.src = img.src;
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
 
 </body>
 </html>

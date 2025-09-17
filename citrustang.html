@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Citrus Tang | ColinTDesign</title>
+  <title>Citrus Tang</title>
   <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="Brand.png">
 </head>
@@ -14,7 +14,7 @@
       <ul>
         <li><a href="work.html">Work</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -40,19 +40,42 @@ seem fun and interesting.
   </div>
 
   <div class="description-image">
-    <img src="Portfolio\Icypolepackaging\Icypole packaging.png" alt="Icypole Design">
+    <img src="Portfolio\Icypolepackaging\Icypole packaging.png" alt="Icypole Design"onclick="openLightbox(this)">
   </div>
 </section>
-<section class="project-gallery one-image">
-  <img src="Portfolio\Icypolepackaging\Icypole front view.jpg" alt="Main project image">
+<section class="project-gallery citrus-image">
+  <img src="Portfolio\Icypolepackaging\Icypole front view.jpg" alt="Main project image"onclick="openLightbox(this)">
 </section>
 
   <footer class="project-footer">
     <a href="work.html">← Back to Work</a>
   </footer>
-        <!-- Footer -->
-  <footer>
+   <footer class="site-footer">
+  <div class="footer-content">
     <p>&copy; 2025 ColinTDesign. All rights reserved.</p>
-  </footer>
+    <nav class="footer-nav">
+      <a href="terms.html">Terms & Conditions</a> |
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</footer>
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <span id="close-btn">&times;</span>
+  <img id="lightbox-img" src="" alt="Expanded image">
+</div>
+
+<script>
+function openLightbox(img) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  lightbox.style.display = "flex";
+  lightboxImg.src = img.src;
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
 </body>
 </html>
