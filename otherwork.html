@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Other projects | ColinTDesign</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Brand.png">
+</head>
+<body>
+  <header>
+    <h1><a href="index.html" >COLINTDESIGN</h1>
+    <nav>
+      <ul>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="project-hero">
+    <h2>OTHER WORK</h2>
+    <p>Other projects I've worked on </p>
+  </section>
+
+<section class="project-gallery six-images">
+  <figure>
+    <img src="Portfolio/Posters/CMH logo.gif" alt="Project image 1" onclick="openLightbox(this)">
+    <figcaption>Animated logo for Casterton Memorial Hospital</figcaption>
+  </figure>
+
+  <figure>
+    <img src="Portfolio\Posters\grow.gif" alt="Project image 2" onclick="openLightbox(this)">
+    <figcaption>Grow.gif Animation</figcaption>
+  </figure>
+
+  <figure>
+    <img src="Portfolio\Posters\PAX poster.png" alt="Project image 3" onclick="openLightbox(this)">
+    <figcaption>PAX 2024 Poster</figcaption>
+  </figure>
+
+  <figure>
+    <img src="Portfolio\Posters\McdonaldPoster.png" alt="Project image 4" onclick="openLightbox(this)">
+    <figcaption>Mcdonald Branding</figcaption>
+  </figure>
+
+  <figure>
+    <img src="Portfolio\Posters\Avocado A3 poster.png" alt="Project image 5" onclick="openLightbox(this)">
+    <figcaption>Avocado Poster</figcaption>
+  </figure>
+
+  <figure>
+    <img src="Portfolio\Posters\test-011.png" alt="Project image 6" onclick="openLightbox(this)">
+    <figcaption>Optima Typeface Poster</figcaption>
+  </figure>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <span id="close-btn">&times;</span>
+  <img id="lightbox-img" src="" alt="Expanded image">
+</div>
+
+<script>
+function openLightbox(img) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  lightbox.style.display = "flex";
+  lightboxImg.src = img.src;
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+
+  <footer class="project-footer">
+    <a href="work.html">← Back to Work</a>
+  </footer>
+   <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 ColinTDesign. All rights reserved.</p>
+    <nav class="footer-nav">
+      <a href="terms.html">Terms & Conditions</a> |
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
