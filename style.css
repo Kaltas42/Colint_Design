@@ -464,9 +464,8 @@ button:hover {
 
 .project-gallery.chocolate img {
   width: 100%;
-  max-width: 500px;
-  height: 450px;
-  object-fit: contain;
+  height: auto;
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   display: block;
